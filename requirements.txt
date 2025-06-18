@@ -1,0 +1,10 @@
+streamlit
+numpy
+pandas
+scikit-learn
+matplotlib==3.10.0
+seaborn==0.13.2
+tensorflow
+pillow
+Keras==2.4.3
+tensorflow==2.3.1

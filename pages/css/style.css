@@ -1,0 +1,29 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu-bar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-bar a:hover {
+    text-decoration: underline;
+}
+ li{
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 14px;
+ }
