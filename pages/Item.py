@@ -335,7 +335,7 @@ if st.button("Complete Purchase", type="primary"):
                 item["quantity"],                                  # Quantity
                 item["item_id"],                                   # Classification_Code
                 # item["price"],                                     # Predicted_Price
-                item["subtotal"],                                  # Amount
+                #item["subtotal"],                                  # Amount
                 total_order_amount                                 # Subtotal (Total for order)
             ]
             save_purchase_data(row_data)
@@ -346,7 +346,7 @@ if st.button("Complete Purchase", type="primary"):
             "order_number": st.session_state.order_number,
             "total_amount": total_order_amount,
             "date_time": purchase_date_time.strftime('%Y-%m-%d %H:%M:%S'),
-            # "image_base64": image_base64
+            "image_base64": image_base64
         }
         st.session_state.current_order = []
         st.session_state.order_number = generate_order_number()
