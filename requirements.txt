@@ -1,3 +1,4 @@
 tensorflow
 bycrpt
 pandas
+pillow
