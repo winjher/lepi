@@ -38,7 +38,7 @@ def _get_base64_image(image_path):
 # --- Apply the background image ---
 # Ensure 'icon/bgbutterfly.jpg' is in the correct path relative to your script
 try:
-    set_background_image('icon/bg.png')
+    set_background_image('icon/bbg.png')
 except FileNotFoundError:
     st.warning("Background image 'icon/bg.jpg' not found. Please ensure it's in the correct path.")
 
@@ -171,24 +171,24 @@ larvaldiseases_model = load_model('model_Larval_Diseases.h5')
 # You will need to populate the detailed info for each class.
 
 butterfly_species_info = {
-    "Butterfly-Clippers": {"scientific_name": "Parthenos sylvia", "family": "Nymphalidae", "discovered":"Carl Peter Thunberg","year":"1776", "description":""},
-    "Butterfly-Common Jay": {"scientific_name": "Graphium doson", "family": "Papilionidae", "discovered":"","year":"", "description":""},
-    "Butterfly-Common Lime": {"scientific_name": "Papilio demoleus", "family": "Papilionidae", "discovered":"", "description":""},
-    "Butterfly-Common Mime": {"scientific_name": "Papilio clytia", "family": "Papilionidae", "discovered":"","year":"", "description":" It's a black-bodied swallowtail and a good example of Batesian mimicry, meaning it mimics the appearance of other distasteful butterflies. "},
-    "Butterfly-Common Mormon": {"scientific_name": "Papilio polytes", "family": "Papilionidae","discovered":"","year":""},
-    "Butterfly-Emerald Swallowtail": {"scientific_name": "Papilio palinurus", "family": "Papilionidae", "discovered":"","year":"", "description":""},
-    "BUtterfly-Golden Birdwing": {"scientific_name": "Troides aeacus", "family": "Papilionidae", "discovered":"","year":"", "description":""},
-    "Butterfly-Gray Glassy Tiger": {"scientific_name": "Ideopsis vulgaris", "family": "Nymphalidae", "discovered":"","year":"", "description":""},
-    "Butterfly-Great Eggfly": {"scientific_name": "Hypolimnas bolina", "family": "Nymphalidae", "discovered":"","year":"", "description":""},
+    "Butterfly-Clippers": {"scientific_name": "Parthenos sylvia", "family": "Nymphalidae", "discovered":"Carl Peter Thunberg, Cramer","year":"1776", "description":"Forewing triangular; costa very slightly curved, apex rounded, exterior margin oblique and slightly scalloped, posterior margin short, angle convex; "},
+    "Butterfly-Common Jay": {"scientific_name": "Graphium doson", "family": "Papilionidae", "discovered":"C. & R. Felder","year":"1864", "description":""},
+    "Butterfly-Common Lime": {"scientific_name": "Papilio demoleus", "family": "Papilionidae", "discovered":"Linnaeus","year":"1758", "description":"The butterfly is tailless and has a wingspan 80–100 mm,the butterfly has a large number of irregular spots on the wing."},
+    "Butterfly-Common Mime": {"scientific_name": "Papilio clytia", "family": "Papilionidae", "discovered":"Linnaeus","year":"1758", "description":" It's a black-bodied swallowtail and a good example of Batesian mimicry, meaning it mimics the appearance of other distasteful butterflies. "},
+    "Butterfly-Common Mormon": {"scientific_name": "Papilio polytes", "family": "Papilionidae","discovered":"Linnaeus","year":"1758", "description":" "},
+    "Butterfly-Emerald Swallowtail": {"scientific_name": "Papilio palinurus", "family": "Papilionidae", "discovered":"Fabricius","year":"1787", "description":""},
+    "BUtterfly-Golden Birdwing": {"scientific_name": "Troides rhadamantus", "family": "Papilionidae", "discovered":"H. Lucas","year":"1835", "description":""},
+    "Butterfly-Gray Glassy Tiger": {"scientific_name": "Ideopsis juventa", "family": "Nymphalidae", "discovered":"Cramer","year":"1777", "description":""},
+    "Butterfly-Great Eggfly": {"scientific_name": "Hypolimnas bolina", "family": "Nymphalidae", "discovered":"Linnaeus","year":"1758", "description":""},
     "Butterfly-Great Yellow Mormon": {"scientific_name": "Papilio lowi", "family": "Papilionidae", "discovered":"","year":"", "description":""},
-    "Butterfly-Paper Kite": {"scientific_name": "Idea leuconoe", "family": "Nymphalidae", "discovered":"","year":"", "description":""},
-    "Butterfly-Pink Rose": {"scientific_name": "Pachliopta kotzebuea", "family": "Papilionidae", "discovered":"","year":"", "description":""},
-    "Butterfly-Plain Tiger": {"scientific_name": "Danaus chrysippus", "family": "Nymphalidae", "discovered":"","year":"", "description":""},
-    "Butterfly-Red Lacewing": {"scientific_name": "Cethosia biblis", "family": "Nymphalidae", "discovered":"","year":"", "description":""},
-    "Butterfly-Scarlet Mormon": {"scientific_name": "Papilio rumanzovia", "family": "Papilionidae", "discovered":"","year":"", "description":""},
-    "Butterfly-Tailed Jay": {"scientific_name": "Graphium agamemnon", "family": "Papilionidae", "discovered":"","year":"", "description":""},
-    "Moth-Atlas": {"scientific_name": "Attacus atlas", "family": "Saturniidae","discovered":"","year":"", "description":""},
-    "Moth-Giant Silk": {"scientific_name": "Samia cynthia", "family": "Saturniidae", "discovered":"","year":"", "description":""},
+    "Butterfly-Paper Kite": {"scientific_name": "Idea leuconoe", "family": "Nymphalidae", "discovered":"Rothschild","year":"1895", "description":""},
+    "Butterfly-Pink Rose": {"scientific_name": "Pachliopta kotzebuea", "family": "Papilionidae", "discovered":"Escholtz","year":"1821", "description":""},
+    "Butterfly-Plain Tiger": {"scientific_name": "Danaus chrysippus", "family": "Nymphalidae", "discovered":"Hulstaert","year":"1931", "description":""},
+    "Butterfly-Red Lacewing": {"scientific_name": "Cethosia biblis", "family": "Nymphalidae", "discovered":"Drury","year":"1773", "description":""},
+    "Butterfly-Scarlet Mormon": {"scientific_name": "Papilio rumanzovia", "family": "Papilionidae", "discovered":"Eschscholtz","year":"1821", "description":""},
+    "Butterfly-Tailed Jay": {"scientific_name": "Graphium agamemnon", "family": "Papilionidae", "discovered":"Linnaeus","year":"1758", "description":""},
+    "Moth-Atlas": {"scientific_name": "Attacus atlas", "family": "Saturniidae","discovered":"Linnaeus","year":"1758", "description":""},
+    "Moth-Giant Silk": {"scientific_name": "Samia cynthia", "family": "Saturniidae", "discovered":"Hubner","year":"1819", "description":""},
 }
 butterfly_species_names = list(butterfly_species_info.keys()) # Ensure order if your model was trained on sorted keys
 
